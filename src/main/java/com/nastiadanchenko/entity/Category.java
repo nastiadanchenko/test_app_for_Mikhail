@@ -1,18 +1,30 @@
 package com.nastiadanchenko.entity;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.Set;
+
 @Entity
-@Data
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "categories")
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+//    @Column(name = "category_id")
     private Long id;
 
-   private String categoryName;
+//    @Column(name = "category_name")
+    private String name;
+
     @OneToMany
-    private List<Product> products;
+    private Set<Product> products;
+
+
+    public Category(String name) {
+        this.name = name;
+    }
 }
