@@ -18,7 +18,7 @@ public class DisplayData extends JFrame implements ActionListener {
     private String data[][] = new String[8][3];
     private static JTable table;
 
-    private final String url = "jdbc:h2:tcp://localhost:9092/mem:product"; //?autoReconnect=true&useSSL=false";
+    private final String url = "jdbc:h2:tcp://localhost:9092/mem:product";
     private final String user = "sa";
     private final String password = "sa";
 

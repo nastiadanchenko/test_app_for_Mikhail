@@ -17,19 +17,12 @@ import java.util.Set;
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-//    @Column(name = "category_id")
     private Long id;
 
-//    @Column(name = "category_name")
     private String name;
 
     @OneToMany
     private Set<Product> products;
-
-
-    public Category(String name) {
-        this.name = name;
-    }
 
     @Override
     public boolean equals(Object o) {
